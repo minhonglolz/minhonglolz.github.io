@@ -1,11 +1,22 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
-import Husky from '../assets/images/husky.jpg';
+import type { NextPage } from 'next'
+import background from '../assets/images/cleanersBG.jpg'
+import NavbarLink from '../components/NavbarLink'
 
 const Home: NextPage = () => {
-  return <h1 className="text-2xl font-bold underline">Hello world!</h1>;
-};
+  return (
+    <div className="h-screen w-full bg-cover bg-center" style={{ backgroundImage: `url(${background.src})` }}>
+      <header className="text-white py-5 px-11">
+        <ul className="flex justify-end">
+          <li className="m-5">
+            <NavbarLink href="/">About</NavbarLink>
+          </li>
+          <li className="m-5">
+            <NavbarLink href="/">Projects</NavbarLink>
+          </li>
+        </ul>
+      </header>
+    </div>
+  )
+}
 
-export default Home;
+export default Home
