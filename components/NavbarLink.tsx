@@ -8,7 +8,21 @@ type Props = LinkProps & {
 export default function NavbarLink ({ children, ...props }: Props) {
   return (
     <Link {...props}>
-      <a className="before:transition-all before:duration-200 before:w-0 before:absolute hover:before:w-full before:h-[2px] before:bg-white before:top-1/2 relative inline-block hover:before:block">{children}</a>
+      <a className="
+      after:content-['<']
+      after:absolute
+      after:top-0
+      after:left-[-15px]
+      after:hidden
+      before:content-['>']
+      before:absolute
+      before:top-0
+      before:right-[-15px]
+      relative
+      before:hidden
+      hover:after:block
+      hover:before:block"
+      >{children}</a>
     </Link>
   )
 }
