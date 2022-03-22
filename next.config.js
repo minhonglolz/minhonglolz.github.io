@@ -9,16 +9,11 @@ const nextConfig = {
       '/': { page: '/' },
     }
   },
-  assetPrefix: "./",
+  assetPrefix: './',
   images: {
-    loader: "akamai",
-    path: ""
-  }
+    loader: 'akamai',
+    path: '',
+  },
 }
 
 module.exports = nextConfig
-
-
-
-
-
