@@ -7,6 +7,8 @@ branches:
     - main
 script:
   - yarn run build
+  - cd out
+  - touch .nojekyll
 deploy:
   provider: pages
   skip_cleanup: true
