@@ -17,14 +17,11 @@ jobs:
           cache: 'yarn'
 
       - name: Install and Build 🔧
-        env:
-          CNAME_URL: ${{ secrets.CNAME_URL }}
         run: |
           yarn ci
           yarn run build
           cd out
           touch .nojekyll
-          echo "$CNAME_URL" > out/CNAME
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
