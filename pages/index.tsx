@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import background from '../assets/images/cleanersBG.jpg'
 import { BackgroundTransparentRow } from '../components/BackgroundTransparentText'
 import NavbarLink from '../components/NavbarLink'
-import useWindowSize from './hooks/useWindowSize'
+import useWindowSize from '../hooks/useWindowSize'
 
 const anchor = ['about', 'projects']
 
