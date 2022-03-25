@@ -25,6 +25,6 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
-          branch: dev # The branch the action should deploy to.
+          branch: product # The branch the action should deploy to.
           folder: out # The folder the action should deploy.
           single-commit: true
