@@ -1,8 +1,10 @@
 import type { NextPage } from 'next'
 import { useEffect, useState } from 'react'
-import background from '../assets/images/cleanersBG.jpg'
 import { BackgroundTransparentRow } from '../components/BackgroundTransparentText'
-import NavbarLink from '../components/NavbarLink'
+import Header from '../components/Header'
+import HomeBackground from '../components/HomeBackground'
+import Logo from '../components/Logo'
+import Navbar from '../components/Navbar'
 import useWindowSize from '../hooks/useWindowSize'
 
 const anchor = ['about', 'projects']
@@ -27,25 +29,11 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <div
-        id="home"
-        className="text-white h-screen w-full bg-cover bg-center flex pt-5"
-        style={{ backgroundImage: `url(${background.src})` }}
-      >
-        <h1 className="mt-5 pl-11 self-start text-left text-[22px] font-bold">
-          <a href="#home">Min</a>
-        </h1>
-        <nav className="px-11 float-right flex-1">
-          <ul className="columns justify-end text-right">
-            <li className="m-5">
-              <NavbarLink href="#about">About</NavbarLink>
-            </li>
-            <li className="m-5">
-              <NavbarLink href="#projects">Projects</NavbarLink>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <Header>
+        <Logo/>
+        <Navbar/>
+      </Header>
+      <HomeBackground/>
       <body>
         <section id="about" className="relative h-screen bg-gradient-to-b from-[#130605] via-[#000] to-[#000] text-white">
           <div className=" text-center pt-20 flex justify-center items-center">
