@@ -8,7 +8,7 @@ export default function Navbar () {
           <NavbarLink href="#about">About</NavbarLink>
         </li>
         <li className="m-5">
-          <NavbarLink href="#projects">Projects</NavbarLink>
+          <NavbarLink href="#experience">Experience</NavbarLink>
         </li>
       </ul>
     </nav>

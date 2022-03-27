@@ -5,6 +5,7 @@ import Header from '../components/Header'
 import HomeBackground from '../components/HomeBackground'
 import Logo from '../components/Logo'
 import Navbar from '../components/Navbar'
+import Title from '../components/Title'
 import useWindowSize from '../hooks/useWindowSize'
 
 const anchor = ['about', 'projects']
@@ -22,10 +23,6 @@ const Home: NextPage = () => {
 
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
-  // console.log(innerHeight, offset)
-  // useEffect(() => {
-
-  // }, [])
 
   return (
     <div>
@@ -33,14 +30,10 @@ const Home: NextPage = () => {
         <Logo/>
         <Navbar/>
       </Header>
-      <HomeBackground/>
+      <HomeBackground id="home"/>
       <body>
         <section id="about" className="relative h-screen bg-gradient-to-b from-[#130605] via-[#000] to-[#000] text-white">
-          <div className=" text-center pt-20 flex justify-center items-center">
-            <span className="text-6xl">{'<'}</span>
-            <span className="text-4xl mx-10 font-bold">About</span>
-            <span className="text-6xl">{'>'}</span>
-          </div>
+          <Title value="About"/>
           <div className="text-xl mt-14 text-center leading-[50px]">
             前端工程師<br/>
             在校就學時一年開發經驗<br/>
@@ -55,12 +48,8 @@ const Home: NextPage = () => {
           </div>
 
         </section>
-        <section id="projects" className="relative h-screen bg-gradient-to-b from-[#130605] via-[#000] to-[#000] text-white">
-          <div className=" text-center pt-20 flex justify-center items-center">
-            <span className="text-6xl">{'<'}</span>
-            <span className="text-4xl mx-10 font-bold">About</span>
-            <span className="text-6xl">{'>'}</span>
-          </div>
+        <section id="experience" className="relative h-screen bg-gradient-to-b from-[#130605] via-[#000] to-[#000] text-white">
+          <Title value="Experience"/>
           <div className="text-xl mt-14 text-center leading-[50px]">
             前端工程師<br/>
             在校就學時一年開發經驗<br/>
