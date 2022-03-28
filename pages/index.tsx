@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { BackgroundTransparentRow } from '../components/BackgroundTransparentText'
 import Header from '../components/Header'
@@ -10,6 +9,7 @@ import Title from '../components/Title'
 import useWindowSize from '../hooks/useWindowSize'
 import _3drensLogo from '../assets/images/3drensLogo.png'
 import _DSCLogo from '../assets/images/DSCLogo.png'
+import ExperienceContent from '../components/ExperienceContent'
 
 const anchor = ['about', 'projects']
 const imageWidth = (455 / 1087) * 100
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     const innerHeight = window.innerHeight
     const onScroll = () => setOffset(window.pageYOffset)
-    // clean up code
+
     window.removeEventListener('scroll', onScroll)
     window.addEventListener('scroll', onScroll, { passive: true })
 
@@ -54,40 +54,35 @@ const Home: NextPage = () => {
         </section>
         <section id="experience" className="relative min-h-screen bg-black text-white">
           <Title value="Experience"/>
-          <div className="mt-[5rem] flex w-full px-[10vw]">
-            <div className="w-[60%] flex-col self-center mr-7">
-              <div className="flex">
-                <h2 className="text-3xl font-bold mr-5">Software Engineer Intern</h2>
-                <h3 className="text-2xl mr-5 italic self-end">3drens</h3>
-                <span className="text-base self-end">2021/07 - Present</span>
-              </div>
-              <div className="pl-[3rem] mt-3 text-base">
-                <ul className="list-disc tracking-widest">
-                  <li> 將現有專案效能優化、抽出重複程式碼，提高可閱讀性，降低維護成本。</li>
-                  <li>設計與開發權限管理和路由架構及撰寫 HDL 文件。</li>
-                  <li>專案導入 ESlint，修復 200+ 錯誤及警告。</li>
-                  <li>專案導入 Hooks，並刪除 40% 冗余程式碼。</li>
-                  <li>開發客製化資訊儀表板、客製化使用者自定義偏好。</li>
-                  <li>定義開發風格規範文件。</li>
-                </ul>
-              </div>
-            </div>
-            <div className={'w-[40%] flex flex-1 justify-center items-center'}><Image className="w-full h-auto" src={_3drensLogo} alt="3drensLogo"/></div>
-          </div>
-          <div className="mt-[5rem] flex w-full px-[10vw]">
-            <div className="w-[60%] flex-col self-center mr-7">
-              <div className="flex">
-                <h2 className="text-3xl font-bold mr-5">Developer Student Club</h2>
-                <span className="text-base self-end">2020/08</span>
-              </div>
-              <div className="pl-[3rem] mt-3 text-base">
-                <span className="list-disc tracking-widest">
-                  Developer Student Clubs 是 Google Developers 所支援的學生開發者社群，而我在計畫中擔任前端課程導師。
-                </span>
-              </div>
-            </div>
-            <div className={'w-[40%] flex flex-1 justify-center items-center'}><Image className="w-full h-auto" src={_DSCLogo} alt="DSCLogo"/></div>
-          </div>
+
+          <ExperienceContent
+            title="Software Engineer Intern"
+            subTitle="3drens"
+            date="2021/07 - Present"
+            image={_3drensLogo}
+            imageAlt="3drensLogo"
+          >
+            <ul className="list-disc tracking-widest">
+              <li> 將現有專案效能優化、抽出重複程式碼，提高可閱讀性，降低維護成本。</li>
+              <li>設計與開發權限管理和路由架構及撰寫 HDL 文件。</li>
+              <li>專案導入 ESlint，修復 200+ 錯誤及警告。</li>
+              <li>專案導入 Hooks，並刪除 40% 冗余程式碼。</li>
+              <li>開發客製化資訊儀表板、客製化使用者自定義偏好。</li>
+              <li>定義開發風格規範文件。</li>
+            </ul>
+          </ExperienceContent>
+
+          <ExperienceContent
+            title="Developer Student Club"
+            date="2020/08"
+            image={_DSCLogo}
+            imageAlt="DSCLogo"
+          >
+            <span className="list-disc tracking-widest">
+              Developer Student Clubs 是 Google Developers 所支援的學生開發者社群，而我在計畫中擔任前端課程導師。
+            </span>
+          </ExperienceContent>
+
         </section>
       </body>
       <footer className="pt-28 bg-black"/>
