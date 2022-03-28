@@ -3,7 +3,7 @@
 @tailwind utilities;
 html,
 body {
-  font-family: 'Baskervville', 'Roboto', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
+  font-family: 'Mulish', sans-serif;
   padding: 0;
   margin: 0;
 }
