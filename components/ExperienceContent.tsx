@@ -1,4 +1,4 @@
-import Image, { ImageProps } from 'next/image'
+import { ImageProps } from 'next/image'
 import { ReactNode } from 'react'
 
 type Props = {
@@ -10,21 +10,17 @@ type Props = {
   imageAlt: string
 }
 
-export default function ExperienceContent ({ title, subTitle, date, children, image, imageAlt }: Props) {
+export default function ExperienceContent ({ title, subTitle, date, children }: Props) {
   return (
-    <div className="mt-[5rem] flex w-full px-[10vw]">
-      <div className="w-[60%] flex-col self-center mr-7">
-        <div className="flex">
-          <h2 className="text-3xl font-bold mr-5">{title}</h2>
-          {subTitle && <h3 className="text-2xl mr-5 italic self-end">3drens</h3>}
-          <span className="text-base self-end">{date}</span>
+    <div className="pt-[5rem] pb-[5rem] flex text-center justify-center w-full px-[10vw] ">
+      <div className="self-center w-[70%]">
+        <h2 className="text-neutral-100 text-3xl font-bold leading-[60px]">{title}</h2>
+        <div>
+          {subTitle && <h3 className="text-neutral-200 text-2xl italic self-end leading-[50px]">{subTitle}</h3>}
+          <div className="text-neutral-300 text-center text-lg tracking-widest leading-[35px] mt-3">
+            {children}
+          </div>
         </div>
-        <div className="pl-[3rem] mt-3 text-base">
-          {children}
-        </div>
-      </div>
-      <div className={'w-[40%] flex flex-1 justify-center items-center'}>
-        <Image className="w-full h-auto" src={image} alt={imageAlt}/>
       </div>
     </div>
   )

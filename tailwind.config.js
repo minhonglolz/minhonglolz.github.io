@@ -20,10 +20,15 @@ module.exports = {
             'animation-timing-function': 'cubic - bezier(0, 0, 0.2, 1)',
           },
         },
+        showText: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
       },
       animation: {
         scroll: 'scroll 150s linear infinite',
         arrow: 'arrow 3s ease-in-out infinite',
+        showText: 'showText .5s ease-in-out forwards',
       },
     },
   },
