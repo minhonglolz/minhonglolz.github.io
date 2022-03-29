@@ -9,19 +9,17 @@ export default function NavbarLink ({ children, ...props }: Props) {
   return (
     <Link {...props}>
       <a className="
+      relative
       after:content-['<']
       after:absolute
-      after:top-0
       after:left-[-15px]
       after:hidden
+      hover:after:inline-block
       before:content-['>']
       before:absolute
-      before:top-0
       before:right-[-15px]
-      relative
       before:hidden
-      hover:after:block
-      hover:before:block"
+      hover:before:inline-block"
       >{children}</a>
     </Link>
   )
