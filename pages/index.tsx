@@ -32,7 +32,7 @@ const Home: NextPage = () => {
         <Navbar/>
       </Header>
       <HomeBackground id="home"/>
-      <body>
+      <div>
         <section id="about" className="relative h-screen bg-gradient-to-b from-[#130605] via-[#000] to-[#000] text-white">
           <Title value="About"/>
           <div className={`${windowHeight * 0.9 < offset && 'opacity-100'} transition-opacity ease-linear opacity-0`}>
@@ -85,7 +85,7 @@ const Home: NextPage = () => {
           </ExperienceContent>
 
         </section>
-      </body>
+      </div>
       <footer className="pt-28 bg-black"/>
     </div>
 
