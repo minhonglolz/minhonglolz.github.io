@@ -10,6 +10,7 @@ import useWindowSize from '../hooks/useWindowSize'
 import _3drensLogo from '../assets/images/3drensLogo.png'
 import _DSCLogo from '../assets/images/DSCLogo.png'
 import ExperienceContent from '../components/ExperienceContent'
+import Loading from '../components/Loading'
 
 const Home: NextPage = () => {
   const [offset, setOffset] = useState(0)
@@ -27,6 +28,7 @@ const Home: NextPage = () => {
 
   return (
     <div>
+      <Loading value="CLEANING"/>
       <Header>
         <Logo/>
         <Navbar/>
