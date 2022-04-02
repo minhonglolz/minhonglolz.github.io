@@ -24,7 +24,7 @@ export default function Title ({ value }: Props) {
   }, [offset])
 
   return (
-    <div className={`${showText && 'opacity-100'} transition-opacity opacity-0 text-center pt-20 flex justify-center items-center ease-linear`}>
+    <div className={`${showText ? 'opacity-100' : 'opacity-0'} transition-opacity  text-center pt-20 flex justify-center items-center ease-linear`}>
       <span className="text-6xl select-none">{'<'}</span>
       <span className="text-4xl mx-10 font-bold">{value}</span>
       <span className="text-6xl select-none">{'>'}</span>
