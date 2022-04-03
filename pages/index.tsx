@@ -37,7 +37,7 @@ const Home: NextPage = () => {
       <div>
         <section id="about" className="relative h-screen bg-gradient-to-b from-[#130605] via-[#000] to-[#000] text-white">
           <Title value="About"/>
-          <div className={`${windowHeight * 0.9 < offset ? 'opacity-100' : 'opacity-0'} transition-opacity ease-linear`}>
+          <div className={`${windowHeight * 0.6 < offset ? 'opacity-100' : 'opacity-0'} transition-opacity ease-linear`}>
             <div className="text-xl mt-14 text-center leading-[50px]">
               前端工程師<br/>
               在校就學時一年開發經驗<br/>
