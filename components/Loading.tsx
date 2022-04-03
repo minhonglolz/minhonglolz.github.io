@@ -40,8 +40,8 @@ export default function Loading () {
             <span style={animationDelayStyle('.6s')} className="animate-loadingText mx-[5px]">.</span>
             <span style={animationDelayStyle('.9s')} className="animate-loadingText mx-[5px]">.</span>
           </div>
-          <div className="mt-5 ">
-            <LoadingText>{goldenSentenceRef.current}</LoadingText>
+          <div className="mt-5">
+            {[...goldenSentenceRef.current].map((item, index) => <LoadingText key={index}>{item}</LoadingText>)}
           </div>
         </div>
       </div>
