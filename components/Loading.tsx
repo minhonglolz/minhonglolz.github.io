@@ -22,7 +22,7 @@ export default function Loading () {
     <div className="w-full h-full fixed animate-loadingHidden bg-black z-[999] text-white">
       <div className="w-full h-full flex flex-col justify-center items-center text-xl text-center">
         <div className="flex justify-center animate-loadingShow">
-          <div className="absolute opacity-[.1]  text-[20vw] select-none tracking-[1rem]">CLEANING</div>
+          <div className="absolute opacity-[.1] text-[20vw] select-none tracking-[1rem]">CLEANING</div>
         </div>
         <div style={animationDelayStyle(0.5)} className="opacity-0 animate-loadingShow">
           <div>
