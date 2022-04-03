@@ -28,7 +28,7 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <Loading value="CLEANING"/>
+      <Loading/>
       <Header>
         <Logo/>
         <Navbar/>

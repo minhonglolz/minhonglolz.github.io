@@ -1,3 +1,4 @@
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -25,17 +26,25 @@ module.exports = {
           '100%': { opacity: 1 },
         },
         loadingText: {
-          '0%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-15px)' },
-          '100%': { transform: 'translateY(0px)' },
+          '0%': {
+            color: '#000',
+          },
+          '50%': {
+            color: '#fff',
+          },
+          '100%': {
+            color: '#000',
+          },
         },
       },
       animation: {
         scroll: 'scroll 150s linear infinite',
         arrow: 'arrow 3s ease-in-out infinite',
         showText: 'showText .5s ease-in-out forwards',
-        loadingText: 'loadingText 2s infinite',
+        loadingText: 'loadingText 3s infinite',
       },
     },
   },
+  plugins: [
+  ],
 }
