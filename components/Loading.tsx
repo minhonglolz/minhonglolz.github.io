@@ -1,10 +1,10 @@
-import { ReactNode } from 'react'
+import { ReactNode, useRef } from 'react'
 
 type LoadingTextProps = {
   children: ReactNode
 }
 
-const ladingText = 'Hero正在努力守護程式碼秩序，就快好了'
+const loadingTitle = 'Hero正在努力守護程式碼秩序，就快好了'
 
 const goldenSentence = [
   '"離開營地前，讓營地比使用前更加乾淨"',
@@ -21,21 +21,29 @@ function LoadingText ({ children }: LoadingTextProps) {
   )
 }
 
-export default function Loading () {
-  return (
-    <div className="fixed w-full h-full bg-black z-[999]">
-      <div className="w-full h-full flex flex-col justify-center items-center text-xl">
-        <div>
-          <span className="mx-[5px]">...</span>
-          {[...ladingText].map((item, index) => <LoadingText key={index}>{item}</LoadingText>)}
-          <span style={{ animationDelay: '.3s' }} className="animate-loadingText mx-[5px]">.</span>
-          <span style={{ animationDelay: '.6s' }} className="animate-loadingText mx-[5px]">.</span>
-          <span style={{ animationDelay: '.9s' }} className="animate-loadingText mx-[5px]">.</span>
-        </div>
-        <div className="mt-5">
-          {[...goldenSentence[getRandomInt(goldenSentence.length)]].map((item, index) => <LoadingText key={index}>{item}</LoadingText>)}
-        </div>
+const animationDelayStyle = (seconds: string) => ({ animationDelay: seconds })
 
+export default function Loading () {
+  const goldenSentenceRef = useRef(goldenSentence[getRandomInt(goldenSentence.length)])
+
+  return (
+    <div className="animate-loadingHidden fixed w-full h-full bg-black z-[999]">
+      <div className="w-full h-full flex flex-col justify-center items-center text-xl text-center">
+        <div className="animate-loadingShow flex justify-center">
+          <div className="absolute opacity-[.1] text-white text-[20vw] tracking-[1rem]">CLEANING</div>
+        </div>
+        <div style={animationDelayStyle('.5s')} className="opacity-0 animate-loadingShow ">
+          <div>
+            <span className="mx-[5px]">&nbsp;&nbsp;&nbsp;</span>
+            {[...loadingTitle].map((item, index) => <LoadingText key={index}>{item}</LoadingText>)}
+            <span style={animationDelayStyle('.3s')} className="animate-loadingText mx-[5px]">.</span>
+            <span style={animationDelayStyle('.6s')} className="animate-loadingText mx-[5px]">.</span>
+            <span style={animationDelayStyle('.9s')} className="animate-loadingText mx-[5px]">.</span>
+          </div>
+          <div className="mt-5 ">
+            <LoadingText>{goldenSentenceRef.current}</LoadingText>
+          </div>
+        </div>
       </div>
     </div>
   )

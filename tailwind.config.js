@@ -36,12 +36,22 @@ module.exports = {
             color: '#000',
           },
         },
+        loadingShow: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+        loadingHidden: {
+          '0%': { opacity: 1 },
+          '100%': { opacity: 0 },
+        },
       },
       animation: {
         scroll: 'scroll 150s linear infinite',
         arrow: 'arrow 3s ease-in-out infinite',
         showText: 'showText .5s ease-in-out forwards',
         loadingText: 'loadingText 3s infinite',
+        loadingHidden: 'loadingHidden .5s 4s ease-in-out forwards',
+        loadingShow: 'loadingShow .5s ease-in-out forwards',
       },
     },
   },

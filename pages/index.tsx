@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import { useEffect, useState } from 'react'
-import { BackgroundTransparentRow } from '../components/BackgroundTransparentText'
+import { OpacityTextRow } from '../components/BackgroundTransparentText'
 import Header from '../components/Header'
 import HomeBackground from '../components/HomeBackground'
 import Logo from '../components/Logo'
@@ -50,7 +50,7 @@ const Home: NextPage = () => {
               <div> &ldquo; styled-component / Tailwind CSS / Material UI &rdquo;</div>
             </div>
           </div>
-          <BackgroundTransparentRow count={6}>ABOUT</BackgroundTransparentRow>
+          <OpacityTextRow count={6}>ABOUT</OpacityTextRow>
         </section>
         <section id="experience" className="relative min-h-screen bg-black text-white">
           <Title value="Experience"/>
