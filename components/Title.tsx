@@ -25,9 +25,7 @@ export default function Title ({ value }: Props) {
 
   return (
     <div className={`${showText ? 'opacity-100' : 'opacity-0'} transition-opacity  text-center pt-20 flex justify-center items-center ease-linear`}>
-      <span className="text-6xl select-none">{'<'}</span>
-      <span className="text-4xl mx-10 font-bold">{value}</span>
-      <span className="text-6xl select-none">{'>'}</span>
+      <span className="text-4xl mx-10 font-bold after:content-['>'] after:ml-3  before:content-['<'] before:mr-3">{value}</span>
     </div>
   )
 };
