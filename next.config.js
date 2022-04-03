@@ -9,7 +9,6 @@ const nextConfig = {
       '/': { page: '/' },
     }
   },
-  // assetPrefix: './',
   images: {
     loader: 'akamai',
     path: '',
