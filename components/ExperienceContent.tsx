@@ -10,7 +10,7 @@ type Props = {
   imageAlt: string
 }
 
-export default function ExperienceContent ({ title, subTitle, date, children }: Props) {
+export default function ExperienceContent ({ title, subTitle, children }: Props) {
   return (
     <div className="pt-[5rem] pb-[5rem] flex text-center justify-center w-full px-[10vw] ">
       <div className="self-center w-[70%]">

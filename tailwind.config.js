@@ -42,7 +42,10 @@ module.exports = {
         },
         loadingHidden: {
           '0%': { opacity: 1 },
-          '100%': { opacity: 0 },
+          '100%': {
+            opacity: 0,
+            'z-index': -999,
+          },
         },
       },
       animation: {

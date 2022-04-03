@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import { useEffect, useState } from 'react'
-import { OpacityTextRow } from '../components/BackgroundTransparentText'
+import { OpacityTextRow } from '../components/OpacityTextRow'
 import Header from '../components/Header'
 import HomeBackground from '../components/HomeBackground'
 import Logo from '../components/Logo'
