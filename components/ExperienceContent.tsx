@@ -7,7 +7,7 @@ type Props = {
   date: string,
   children?: ReactNode,
   image: ImageProps['src'],
-  imageAlt: string
+  imageAlt: string,
 }
 
 export default function ExperienceContent ({ title, subTitle, children }: Props) {

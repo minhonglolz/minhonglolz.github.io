@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 type Props = {
-  value: string
+  value: string,
 }
 
 export default function Title ({ value }: Props) {

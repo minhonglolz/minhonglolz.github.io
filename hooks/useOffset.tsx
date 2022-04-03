@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 
 type Offset = {
- offsetX: number,
- offsetY: number
+  offsetX: number,
+  offsetY: number,
 }
 
 export default function useOffset () {

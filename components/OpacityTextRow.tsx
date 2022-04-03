@@ -1,8 +1,8 @@
 import { ReactNode } from 'react'
 
 type Props = {
- children: ReactNode,
- count?:number
+  children: ReactNode,
+  count?: number,
 }
 
 export function OpacityText ({ children }: Props) {

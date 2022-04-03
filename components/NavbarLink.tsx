@@ -2,7 +2,7 @@ import Link, { LinkProps } from 'next/link'
 import { ReactNode } from 'react'
 
 type Props = LinkProps & {
- children: ReactNode,
+  children: ReactNode,
 }
 
 export default function NavbarLink ({ children, ...props }: Props) {

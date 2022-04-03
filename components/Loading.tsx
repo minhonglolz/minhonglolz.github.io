@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 import useMotto from '../hooks/useMotto'
 
 type LoadingCharProps = {
-  children: ReactNode
+  children: ReactNode,
 }
 
 function LoadingChar ({ children }: LoadingCharProps) {
