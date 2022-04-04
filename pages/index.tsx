@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { OpacityTextRow } from '../components/OpacityTextRow'
 import Header from '../components/Header'
 import HomeBackground from '../components/HomeBackground'
-import Menu from '../components/Menu'
+import MenuButton, { Menu } from '../components/MenuButton'
 import Navbar from '../components/Navbar'
 import Title from '../components/Title'
 import useWindowSize from '../hooks/useWindowSize'
@@ -28,9 +28,9 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <Loading/>
+      {/* <Loading/> */}
+      <Menu/>
       <Header>
-        <Menu/>
         <Navbar/>
       </Header>
       <HomeBackground id="home"/>

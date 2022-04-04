@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export interface Actions {
+type Actions = {
   setTrue: () => void,
   setFalse: () => void,
 }
