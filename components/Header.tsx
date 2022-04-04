@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import animationDelayStyle from '../libs/animationDelayStyle'
 
 type Props = {
   children: ReactNode,
@@ -6,6 +7,6 @@ type Props = {
 
 export default function Header ({ children }: Props) {
   return (
-    <header className="fixed z-50 text-white flex justify-between w-full">{children}</header>
+    <header style={animationDelayStyle(3.5)} className="opacity-0 animate-opacity0To1 transition-opacity fixed z-50 text-white flex justify-between w-full">{children}</header>
   )
 };

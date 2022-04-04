@@ -36,11 +36,11 @@ module.exports = {
             color: '#000',
           },
         },
-        loadingShow: {
+        opacity0To1: {
           '0%': { opacity: 0 },
           '100%': { opacity: 1 },
         },
-        loadingHidden: {
+        opacity1To0: {
           '0%': { opacity: 1 },
           '100%': {
             opacity: 0,
@@ -53,8 +53,8 @@ module.exports = {
         arrow: 'arrow 3s ease-in-out infinite',
         showText: 'showText .5s ease-in-out forwards',
         loadingText: 'loadingText 3s infinite',
-        loadingHidden: 'loadingHidden .5s 3s ease-in-out forwards',
-        loadingShow: 'loadingShow .5s ease-in-out forwards',
+        opacity1To0: 'opacity1To0 .5s 3s ease-in-out forwards',
+        opacity0To1: 'opacity0To1 .5s ease-in-out forwards',
       },
     },
   },
