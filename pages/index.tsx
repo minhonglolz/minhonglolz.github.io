@@ -28,7 +28,7 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      {/* <Loading/> */}
+      <Loading/>
       <Menu/>
       <Header>
         <Navbar/>

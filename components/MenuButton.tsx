@@ -1,6 +1,7 @@
 import useToggle from '../hooks/useToggle'
 import { navBarLinks } from '../components/Navbar'
 import { useCallback } from 'react'
+import animationDelayStyle from '../libs/animationDelayStyle'
 
 type MenuButtonProps = {
   open: boolean,
@@ -11,7 +12,10 @@ export default function MenuButton ({ open, toggle }: MenuButtonProps) {
   return (
     <div
       onClick={toggle}
-      className={`mt-8 z-50 fixed ml-11 w-[28px] h-[28px] flex items-center justify-center 
+      style={animationDelayStyle(3.8)}
+      className={`
+      opacity-0 animate-opacity0To1 transition-opacity
+      mt-8 z-50 fixed ml-11 w-[28px] h-[28px] flex items-center justify-center 
       transition cursor-pointer before:transition before:absolute 
       before:w-[28px] before:h-[2px] before:bg-white 
       after:transition after:absolute after:w-[28px] after:h-[2px] after:bg-white after:translate-y-[10px]
@@ -44,7 +48,7 @@ export function Menu () {
   return (
     <div>
       <MenuButton open={open} toggle={toggle}/>
-      <div className={`${open ? 'opacity-100' : 'opacity-0'} 
+      <div className={`${open ? 'opacity-100' : 'opacity-0'}
       transition-opacity duration-500 z-40 fixed bg-[#ff641e] h-[100vh] w-full 
       flex flex-col justify-center items-center`}
       >
