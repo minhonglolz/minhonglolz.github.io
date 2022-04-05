@@ -1,7 +1,9 @@
 import useToggle from '../hooks/useToggle'
 import { navBarLinks } from './Navbar'
-import { useCallback } from 'react'
+import { useCallback, useEffect } from 'react'
 import animationDelayStyle from '../libs/animationDelayStyle'
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
+import getTargetElement from '../libs/getTargetElement'
 
 type MenuButtonProps = {
   open: boolean,
@@ -40,11 +42,26 @@ function Encourages () {
   )
 }
 
+const bodyElement = getTargetElement('#body')
+
 export function Menu () {
   const { state: open, toggle } = useToggle(false)
   const handleClickLink = useCallback(() => {
     toggle()
   }, [toggle])
+
+  useEffect(() => {
+    if (!bodyElement) return
+
+    if (open) {
+      disableBodyScroll(bodyElement)
+    } else {
+      enableBodyScroll(bodyElement)
+    }
+
+    return () => clearAllBodyScrollLocks()
+  }, [open])
+
   return (
     <div>
       <MenuButton open={open} toggle={toggle}/>

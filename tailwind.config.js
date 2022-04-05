@@ -53,7 +53,7 @@ module.exports = {
         arrow: 'arrow 3s ease-in-out infinite',
         showText: 'showText .5s ease-in-out forwards',
         loadingText: 'loadingText 3s infinite',
-        opacity1To0: 'opacity1To0 .5s 3s ease-in-out forwards',
+        opacity1To0: 'opacity1To0 .5s ease-in-out forwards',
         opacity0To1: 'opacity0To1 .5s ease-in-out forwards',
       },
     },
