@@ -51,7 +51,7 @@ export default function Loading () {
         <div
           style={animationDelayStyle(0.5)}
           onAnimationEnd={handleStopPropagation}
-          className="opacity-0 animate-opacity0To1"
+          className="opacity-0 animate-opacity0To1 px-10"
         >
           <div>
             <span className="mx-[5px]">&nbsp;&nbsp;&nbsp;</span>
