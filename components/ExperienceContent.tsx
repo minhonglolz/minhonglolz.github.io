@@ -12,8 +12,8 @@ type Props = {
 
 export default function ExperienceContent ({ title, subTitle, children }: Props) {
   return (
-    <div className="pt-[5rem] pb-[5rem] flex text-center justify-center w-full px-[10vw] ">
-      <div className="self-center w-[70%]">
+    <div className="px-10 pt-[5rem] pb-[5rem] flex text-center justify-center w-full">
+      <div className="self-center">
         <h2 className="text-neutral-100 text-3xl font-bold leading-[60px]">{title}</h2>
         <div>
           {subTitle && <h3 className="text-neutral-200 text-2xl italic self-end leading-[50px]">{subTitle}</h3>}
