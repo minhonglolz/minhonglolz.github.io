@@ -1,5 +1,5 @@
 import useToggle from '../hooks/useToggle'
-import { navBarLinks } from '../components/Navbar'
+import { navBarLinks } from './Navbar'
 import { useCallback } from 'react'
 import animationDelayStyle from '../libs/animationDelayStyle'
 
@@ -14,9 +14,9 @@ export default function MenuButton ({ open, toggle }: MenuButtonProps) {
       onClick={toggle}
       style={animationDelayStyle(3.8)}
       className={`
-      opacity-0 animate-opacity0To1 transition-opacity
+      opacity-0 animate-opacity0To1 transition
       mt-8 z-50 fixed ml-11 w-[28px] h-[28px] flex items-center justify-center 
-      transition cursor-pointer before:transition before:absolute 
+      cursor-pointer before:transition before:absolute 
       before:w-[28px] before:h-[2px] before:bg-white 
       after:transition after:absolute after:w-[28px] after:h-[2px] after:bg-white after:translate-y-[10px]
       ${open &&
@@ -48,24 +48,26 @@ export function Menu () {
   return (
     <div>
       <MenuButton open={open} toggle={toggle}/>
-      <div className={`${open ? 'opacity-100' : 'opacity-0'}
+      <div className={`${open ? 'opacity-100' : 'opacity-0 pointer-events-none'}
       transition-opacity duration-500 z-40 fixed bg-[#ff641e] h-[100vh] w-full 
-      flex flex-col justify-center items-center`}
+      flex flex-col justify-center items-center px-11`}
       >
-        <div className="flex-1 p-9 max-w-[1024px] w-full flex text-white text-start">
-          <div className="my-auto flex-1"><h1 className="text-[48px]">Minhong</h1></div>
+        <div className="flex-1 max-w-[1024px] w-full md:flex text-white text-start">
+          <div className="my-auto pt-20 md:pt-0 pb-12 md:pb-0 flex-1"><h1 className="text-[38px] md:text-[48px]">Minhong</h1></div>
           <div className="flex-1 text-[32px] flex flex-col items-start justify-center">
             {navBarLinks.map((link, index) =>
               <a onClick={handleClickLink}
                 key={index}
                 href={`#${link.toLowerCase()}`}
-                className="mb-4 hover:translate-x-2 transition-transform"
+                className="mb-1 hover:translate-x-2 transition-transform"
               >{link}</a>)
               }
+            <div className="block md:hidden min-w-[300px] max-w-[300px] md:before:w-full h-px bg-white my-10"/>
           </div>
+
           <div className="flex-1 my-auto">
             <Encourages/>
-            <div className="before:w-full h-px bg-white my-10"/>
+            <div className="min-w-[300px] max-w-[300px] before:w-full h-px bg-white my-10"/>
             <div>
               <a
                 href="https://github.com/minhonglolz"
@@ -80,7 +82,7 @@ export function Menu () {
             </div>
           </div>
         </div>
-        <div className="text-white max-w-[1024px] p-9 w-full flex justify-between">
+        <div className="text-white max-w-[1024px] pb-9 md:p-9 w-full flex flex-col md:flex-row md:justify-between">
           <span className="mr-auto">Hero.</span>
           <span>© Minhong. All Rights Reserved.</span>
         </div>
