@@ -1,4 +1,5 @@
 import NavbarLink from './NavbarLink'
+import { Link } from 'react-scroll'
 
 export const navBarLinks = [
   'About',
@@ -11,7 +12,9 @@ export default function Navbar () {
       <ul className="columns justify-end text-right flex">
         {navBarLinks.map((link, index) => (
           <li key={index} className="mx-5 mb-5">
-            <NavbarLink href={`#${link.toLowerCase()}`}>{link}</NavbarLink>
+            <Link className="cursor-pointer" activeClass="active" to={`${link.toLowerCase()}`} spy={true} duration={500}>
+              <NavbarLink>{link}</NavbarLink>
+            </Link>
           </li>
         ))}
       </ul>

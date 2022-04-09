@@ -1,13 +1,12 @@
-import Link, { LinkProps } from 'next/link'
-import { ReactNode } from 'react'
+import { ReactElement, ReactNode } from 'react'
 
-type Props = LinkProps & {
+type Props = ReactElement & {
   children: ReactNode,
 }
 
 export default function NavbarLink ({ children, ...props }: Props) {
   return (
-    <Link {...props}>
+    <div {...props}>
       <a className="
       relative
       after:content-['<']
@@ -21,6 +20,6 @@ export default function NavbarLink ({ children, ...props }: Props) {
       before:hidden
       hover:before:inline-block"
       >{children}</a>
-    </Link>
+    </div>
   )
 }
