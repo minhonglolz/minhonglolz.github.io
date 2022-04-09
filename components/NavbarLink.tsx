@@ -1,6 +1,6 @@
-import { ReactElement, ReactNode } from 'react'
+import { ReactNode } from 'react'
 
-type Props = ReactElement & {
+type Props = {
   children: ReactNode,
 }
 
