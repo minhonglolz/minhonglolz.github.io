@@ -4,13 +4,14 @@ import { OpacityTextRow } from '../components/OpacityTextRow'
 import Header from '../components/Header'
 import HomeBackground from '../components/HomeBackground'
 import { Menu } from '../components/Menu'
-import Navbar from '../components/Navbar'
+import Navbar, { navbarLinks } from '../components/Navbar'
 import Title from '../components/Title'
 import useWindowSize from '../hooks/useWindowSize'
 import _3drensLogo from '../assets/images/3drensLogo.png'
 import _DSCLogo from '../assets/images/DSCLogo.png'
 import ExperienceContent from '../components/ExperienceContent'
 import Loading from '../components/Loading'
+// @ts-ignore
 import { Element } from 'react-scroll'
 
 const Home: NextPage = () => {
@@ -36,7 +37,7 @@ const Home: NextPage = () => {
       </Header>
       <HomeBackground id="home"/>
       <div>
-        <Element name="about" id="about" className="relative h-screen bg-gradient-to-b from-[#130605] via-[#000] to-[#000] text-white">
+        <Element name={navbarLinks.about.id} className="relative h-screen bg-gradient-to-b from-[#130605] via-[#000] to-[#000] text-white">
           <Title value="About"/>
           <div className={`px-10 ${windowHeight * 0.6 < offset ? 'opacity-100' : 'opacity-0'} transition-opacity ease-linear`}>
             <div className="text-xl mt-14 text-center leading-[50px]">
@@ -53,7 +54,7 @@ const Home: NextPage = () => {
           </div>
           <OpacityTextRow count={6}>ABOUT</OpacityTextRow>
         </Element>
-        <Element name="experience" className="relative min-h-screen bg-black text-white">
+        <Element name={navbarLinks.experience.id} className="relative min-h-screen bg-black text-white">
           <Title value="Experience"/>
 
           <ExperienceContent

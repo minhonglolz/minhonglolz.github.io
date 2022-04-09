@@ -1,9 +1,10 @@
 import useToggle from '../hooks/useToggle'
-import { navBarLinks } from './Navbar'
+import { navbarLinks } from './Navbar'
 import { useCallback, useEffect } from 'react'
 import animationDelayStyle from '../libs/animationDelayStyle'
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
 import getTargetElement from '../libs/getTargetElement'
+// @ts-ignore
 import { Link } from 'react-scroll'
 
 type MenuButtonProps = {
@@ -73,14 +74,14 @@ export function Menu () {
         <div className="flex-1 max-w-[1024px] w-full md:flex text-white text-start">
           <div className="my-auto pt-28 md:pt-0 pb-12 md:pb-0 flex-1"><h1 className="text-[38px] md:text-[48px]">Minhong</h1></div>
           <div className="flex-1 text-[32px] flex flex-col items-start justify-center">
-            {navBarLinks.map((link, index) =>
+            {Object.values(navbarLinks).map(({ title, id }, index) =>
               <Link
                 className="cursor-pointer mb-1 hover:translate-x-2 transition-transform"
                 key={index} onClick={handleClickLink}
-                to={`${link.toLowerCase()}`}
+                to={id}
                 spy={true}
                 duration={500}
-              >{link}</Link>)
+              >{title}</Link>)
               }
             <div className="block md:hidden min-w-[300px] max-w-[300px] md:before:w-full h-px bg-white my-10"/>
           </div>
