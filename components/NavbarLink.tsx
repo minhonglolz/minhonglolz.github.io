@@ -7,7 +7,7 @@ type Props = {
 export default function NavbarLink ({ children, ...props }: Props) {
   return (
     <div {...props}>
-      <a className="
+      <div className="
       relative
       after:content-['<']
       after:absolute
@@ -19,7 +19,7 @@ export default function NavbarLink ({ children, ...props }: Props) {
       before:right-[-15px]
       before:hidden
       hover:before:inline-block"
-      >{children}</a>
+      >{children}</div>
     </div>
   )
 }
