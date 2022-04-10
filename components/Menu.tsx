@@ -72,7 +72,9 @@ export function Menu () {
       flex flex-col justify-center items-center px-11 overflow-auto`}
       >
         <div className="flex-1 max-w-[1024px] w-full md:flex text-white text-start">
-          <div className="my-auto pt-28 md:pt-0 pb-12 md:pb-0 flex-1"><h1 className="text-[38px] md:text-[48px]">Minhong</h1></div>
+          <div className="my-auto pt-28 md:pt-0 pb-12 md:pb-0 flex-1">
+            <h1 className="text-[38px] md:text-[48px]">Min</h1>
+          </div>
           <div className="flex-1 text-[32px] flex flex-col items-start justify-center">
             {Object.values(navbarLinks).map(({ title, id }, index) =>
               <Link
@@ -103,7 +105,7 @@ export function Menu () {
             </div>
           </div>
         </div>
-        <div className="text-white max-w-[1024px] pb-9 md:p-9 w-full flex flex-col md:flex-row md:justify-between">
+        <div className="text-white max-w-[1024px] pb-9 md:py-9 w-full flex flex-col md:flex-row md:justify-between">
           <span className="mr-auto">Hero.</span>
           <span>© Minhong. All Rights Reserved.</span>
         </div>
