@@ -106,7 +106,7 @@ export function Menu () {
           </div>
         </div>
         <div className="text-white max-w-[1024px] pb-9 md:py-9 w-full flex flex-col md:flex-row md:justify-between">
-          <span className="mr-auto">Hero.</span>
+          <span>Hero.</span>
           <span>© Minhong. All Rights Reserved.</span>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import NavbarLink from './NavbarLink'
 // @ts-ignore
 import { Link } from 'react-scroll'
+import { HTMLAttributes } from 'react'
 
 export const navbarLinks = {
   about: {
@@ -13,12 +14,12 @@ export const navbarLinks = {
   },
 }
 
-export default function Navbar () {
+export default function Navbar (props: HTMLAttributes<'div'>) {
   return (
-    <nav className="px-11 flex-1 z-30">
+    <nav className={`${props.className} px-11 flex-1 z-30`}>
       <ul className="columns justify-end text-right flex">
         {Object.values(navbarLinks).map(({ title, id }, index) => (
-          <li key={index} className="mx-5 mb-5">
+          <li key={index} className="ml-10">
             <Link className="cursor-pointer" activeClass="active" to={id} spy={true} duration={500}>
               <NavbarLink>{title}</NavbarLink>
             </Link>
@@ -26,5 +27,6 @@ export default function Navbar () {
         ))}
       </ul>
     </nav>
+
   )
 }

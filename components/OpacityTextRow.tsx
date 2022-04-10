@@ -7,7 +7,7 @@ type Props = {
 
 export function OpacityText ({ children }: Props) {
   return (
-    <div className="text-[16rem] tracking-[1.5rem] min-w-[1200px]">{children}</div>
+    <div className="text-[16rem] leading-[14rem] tracking-[1.5rem] min-w-[1200px]">{children}</div>
   )
 }
 

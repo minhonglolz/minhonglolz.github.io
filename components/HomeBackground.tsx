@@ -4,11 +4,11 @@ import background from '../assets/images/cleanersBG.jpg'
 import animationDelayStyle from '../libs/animationDelayStyle'
 import { navbarLinks } from './Navbar'
 // @ts-ignore
-import { Link } from 'react-scroll'
+import { Link, Element } from 'react-scroll'
 
 export default function HomeBackground (props: HTMLAttributes<'div'>) {
   return (
-    <div className="bg-black relative">
+    <Element name="home" className="bg-black relative">
       <Link
         className="cursor-pointer z-20 text-white absolute bottom-0 -translate-y-6 -translate-x-1/2 left-1/2
         before:absolute before:left-1/2 before:bottom-0 before:w-px before:translate-y-6 before:h-6 before:bg-white before:z-30 select-none"
@@ -25,7 +25,7 @@ export default function HomeBackground (props: HTMLAttributes<'div'>) {
       >
         <div/>
       </div>
-    </div>
+    </Element>
 
   )
 };
