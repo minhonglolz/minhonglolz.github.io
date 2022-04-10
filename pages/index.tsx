@@ -27,7 +27,7 @@ const Home: NextPage = () => {
   }, [])
 
   return (
-    <div>
+    <div className="bg-black">
       <Loading/>
       <Menu/>
       <Header>
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
           </div>
           <OpacityTextRow count={6}>ABOUT</OpacityTextRow>
         </Element>
-        <Element name={navbarLinks.experience.id} className="relative min-h-screen bg-black text-white">
+        <Element name={navbarLinks.experience.id} className="relative min-h-screen text-white">
           <Title value="Experience"/>
           {experiences.map((item, index) => (
             <ExperienceContent
@@ -72,7 +72,9 @@ const Home: NextPage = () => {
           ))}
         </Element>
       </div>
-      <footer className="pt-28 bg-black"/>
+      <footer className="-translate-y-[50px] relative h-[500px] text-white">
+        <OpacityTextRow count={6}>CLEAN</OpacityTextRow>
+      </footer>
     </div>
 
   )
