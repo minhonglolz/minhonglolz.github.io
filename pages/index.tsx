@@ -33,7 +33,7 @@ const Home: NextPage = () => {
       <Header>
         <Navbar/>
       </Header>
-      <HomeBackground id="home"/>
+      <HomeBackground/>
       <div>
         <Element name={navbarLinks.about.id} className="relative h-screen bg-gradient-to-b from-[#130605] via-[#000] to-[#000] text-white">
           <Title value="About"/>
