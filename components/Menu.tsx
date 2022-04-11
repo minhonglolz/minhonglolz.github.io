@@ -18,8 +18,9 @@ export default function MenuButton ({ open, toggle }: MenuButtonProps) {
       onClick={toggle}
       style={animationDelayStyle(3.8)}
       className={`
+      mr-11 sm:mr-0 right-0 sm:left-0
       opacity-0 animate-opacity0To1 transition
-      mt-8 z-50 fixed ml-11 w-[28px] h-[28px] flex items-center justify-center 
+      mt-8 z-50 fixed sm:ml-11 w-[28px] h-[28px] flex items-center justify-center 
       cursor-pointer before:transition before:absolute 
       before:w-[28px] before:h-[2px] before:bg-white 
       after:transition after:absolute after:w-[28px] after:h-[2px] after:bg-white after:translate-y-[10px]

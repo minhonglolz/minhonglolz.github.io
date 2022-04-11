@@ -38,14 +38,14 @@ const Home: NextPage = () => {
         <Element name={navbarLinks.about.id} className="relative h-screen bg-gradient-to-b from-[#130605] via-[#000] to-[#000] text-white">
           <Title value="About"/>
           <div className={`px-10 ${windowHeight * 0.6 < offset ? 'opacity-100' : 'opacity-0'} transition-opacity ease-linear`}>
-            <div className="text-xl mt-14 text-center leading-[50px]">
+            <div className="text-xl mt-14 sm:text-center leading-[50px]">
               <p>前端工程師</p>
               <p>在校就學時一年開發經驗</p>
               <p>實習時一年及四個以上大型專案合作開發經驗</p>
               <p>擅長使用 React</p>
               <p>不斷追逐著 Clean Code</p>
             </div>
-            <div className="text-neutral-200 mt-14 text-center text-xl font-black ">
+            <div className="text-neutral-200 mt-14 sm:text-center text-xl font-black ">
               <div className="mb-3">&ldquo; TypeScript / React / React Native / Redux / Next &rdquo; <br/></div>
               <div> &ldquo; styled-component / Tailwind CSS / Material UI &rdquo;</div>
             </div>
