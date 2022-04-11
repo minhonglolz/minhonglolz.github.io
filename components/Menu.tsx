@@ -101,7 +101,7 @@ export function Menu () {
                 before:bottom-[11px] before:left-[90px]
                 after:w-2 after:h-[2px] after:bg-white after:absolute
                 after:top-[24px] after:left-[110px] after:rotate-[30deg]" rel="noreferrer"
-              >Github</a>
+              >GitHub</a>
               <div className="text-lg mt-3">Mail: z574512z@gmail.com</div>
             </div>
           </div>

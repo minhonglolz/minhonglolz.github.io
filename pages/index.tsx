@@ -37,7 +37,7 @@ const Home: NextPage = () => {
       <div>
         <Element name={navbarLinks.about.id} className="relative h-screen bg-gradient-to-b from-[#130605] via-[#000] to-[#000] text-white">
           <Title value="About"/>
-          <div className={`px-10 ${windowHeight * 0.6 < offset ? 'opacity-100' : 'opacity-0'} transition-opacity ease-linear`}>
+          <div className={`px-5 ${windowHeight * 0.6 < offset ? 'opacity-100' : 'opacity-0'} transition-opacity ease-linear`}>
             <div className="text-xl mt-14 sm:text-center leading-[50px]">
               <p>前端工程師</p>
               <p>在校就學時一年開發經驗</p>
@@ -75,7 +75,7 @@ const Home: NextPage = () => {
       <section className="relative h-[300px] text-white">
         <OpacityTextRow count={6}>CLEAN</OpacityTextRow>
       </section>
-      <footer className="text-white w-full sm:w-[90%] mx-auto p-10">
+      <footer className="text-white w-full sm:w-[90%] mx-auto p-5">
         <div className="flex flex-col sm:flex-row justify-between relative before:absolute before:-bottom-3 before:w-full before:h-[2px] before:bg-white sm:items-end">
           <Link className="mr-auto cursor-pointer" activeClass="active" to={'home'} spy={true} duration={500}>
             <h1 className="text-4xl mb-3 sm:mb-0">Min</h1>
@@ -89,7 +89,7 @@ const Home: NextPage = () => {
             <a href="https://github.com/minhonglolz"
               target="_blank"
               rel="noreferrer"
-            >Github</a>
+            >GitHub</a>
           </div>
 
         </div>

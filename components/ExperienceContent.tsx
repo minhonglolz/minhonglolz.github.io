@@ -79,7 +79,7 @@ type Props = {
 export default function ExperienceContent ({ title, subTitle, children, even, index }: Props) {
   return (
     <div className="w-full flex sm:text-center justify-center">
-      <div className={'w-full sm:w-auto lg:min-w-[1024px] md:min-w-[800px] relative px-10 pt-[5rem] pb-[5rem]'}>
+      <div className={'w-full sm:w-auto lg:min-w-[1024px] md:min-w-[800px] relative px-5 pt-[5rem] pb-[5rem]'}>
         <div className={`absolute hidden md:block  md:text-[12rem] lg:text-[16rem] italic text-white opacity-10 ${even ? '-right-0' : '-left-0 '} top-28 -translate-y-1/2`}>{index > 9 || '0'}{index + 1}</div>
         <div className="self-center">
           <h2 className="text-neutral-100 text-3xl font-bold leading-[60px]">{title}</h2>
