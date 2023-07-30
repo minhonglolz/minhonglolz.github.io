@@ -40,13 +40,15 @@ const Home: NextPage = () => {
           <div className={`px-5 ${windowHeight * 0.6 < offset ? 'opacity-100' : 'opacity-0'} transition-opacity ease-linear`}>
             <div className="text-xl mt-14 sm:text-center leading-[50px]">
               <p>前端工程師</p>
-              <p>在校就學時一年開發經驗</p>
-              <p>實習時一年及四個以上大型專案合作開發經驗</p>
-              <p>擅長使用 React</p>
+              <p>擅長使用 React 和 Vue</p>
+              <p>熱衷於撰寫高品質的程式碼</p>
+              <p>有為團隊提供自動化測試及優化網站效能經驗</p>
+              <p>並關注前端技術的最新發展和趨勢</p>
               <p>不斷追逐著 Clean Code</p>
             </div>
             <div className="text-neutral-200 mt-14 sm:text-center text-xl font-black ">
-              <div className="mb-3">&ldquo; TypeScript / React / React Native / Redux / Next &rdquo; <br/></div>
+              <div className="mb-3 text-2xl">技能</div>
+              <div className="mb-3">&ldquo; TypeScript / React / React Native / Next.js / Vue &rdquo; <br/></div>
               <div> &ldquo; styled-component / Tailwind CSS / Material UI &rdquo;</div>
             </div>
           </div>
@@ -56,12 +58,13 @@ const Home: NextPage = () => {
           <Title value="Experience"/>
           {experiences.map((item, index) => (
             <ExperienceContent
-              key={index}
+              key={item.title}
               title={item.title}
               subTitle={item.subTitle}
               date={item.date}
               even={Boolean(index % 2)}
               index={index}
+              link={item.link}
             >
               <span className="list-disc tracking-widest">
                 {item.contents.map((content, index) =>

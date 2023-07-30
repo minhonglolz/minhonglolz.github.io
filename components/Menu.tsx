@@ -32,7 +32,7 @@ export default function MenuButton ({ open, toggle }: MenuButtonProps) {
 };
 
 const encourages = [
-  'Be a code cleaner.',
+  'Self-improvement.',
   'Help yourself.',
   'Help others.',
 ]
@@ -68,8 +68,9 @@ export function Menu () {
   return (
     <div className="">
       <MenuButton open={open} toggle={toggle}/>
-      <div className={`${open ? 'opacity-100' : 'opacity-0 pointer-events-none'}
-      transition-opacity duration-500 z-40 fixed bg-[#ff641e] h-[100vh] w-full 
+      <div
+        className={`${open ? 'opacity-100' : 'opacity-0 pointer-events-none'}
+      transition-opacity duration-500 z-40 fixed bg-[#ed6424] h-[100vh] w-full 
       flex flex-col justify-center items-center px-11 overflow-auto`}
       >
         <div className="flex-1 max-w-[1024px] w-full md:flex text-white text-start">
@@ -80,7 +81,8 @@ export function Menu () {
             {Object.values(navbarLinks).map(({ title, id }, index) =>
               <Link
                 className="cursor-pointer mb-1 hover:translate-x-2 transition-transform"
-                key={index} onClick={handleClickLink}
+                key={index}
+                onClick={handleClickLink}
                 to={id}
                 spy={true}
                 duration={500}
