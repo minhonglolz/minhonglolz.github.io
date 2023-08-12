@@ -1,31 +1,16 @@
 import type { NextPage } from 'next'
-import { useEffect, useState } from 'react'
 import { OpacityTextRow } from '../components/OpacityTextRow'
 import Header from '../components/Header'
 import HomeBackground from '../components/HomeBackground'
 import { Menu } from '../components/Menu'
 import Navbar, { navbarLinks } from '../components/Navbar'
 import Title from '../components/Title'
-import useWindowSize from '../hooks/useWindowSize'
 import ExperienceContent, { experiences } from '../components/ExperienceContent'
 import Loading from '../components/Loading'
-// @ts-ignore
 import { Link, Element } from 'react-scroll'
+import { About } from '../components/About'
 
 const Home: NextPage = () => {
-  const [offset, setOffset] = useState(0)
-  const { windowSize } = useWindowSize()
-  const windowHeight = windowSize.height
-
-  useEffect(() => {
-    const onScroll = () => setOffset(window.pageYOffset)
-
-    window.removeEventListener('scroll', onScroll)
-    window.addEventListener('scroll', onScroll, { passive: true })
-
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
   return (
     <div className="bg-black">
       <Loading/>
@@ -35,25 +20,7 @@ const Home: NextPage = () => {
       </Header>
       <HomeBackground/>
       <div>
-        <Element name={navbarLinks.about.id} className="relative h-screen bg-gradient-to-b from-[#130605] via-[#000] to-[#000] text-white">
-          <Title value="About"/>
-          <div className={`px-5 ${windowHeight * 0.6 < offset ? 'opacity-100' : 'opacity-0'} transition-opacity ease-linear`}>
-            <div className="text-xl mt-14 sm:text-center leading-[50px]">
-              <p>前端工程師</p>
-              <p>擅長使用 React 和 Vue</p>
-              <p>熱衷於撰寫高品質的程式碼</p>
-              <p>有為團隊提供自動化測試及優化網站效能經驗</p>
-              <p>並關注前端技術的最新發展和趨勢</p>
-              <p>不斷追逐著 Clean Code</p>
-            </div>
-            <div className="text-neutral-200 mt-14 sm:text-center text-xl font-black ">
-              <div className="mb-3 text-2xl">技能</div>
-              <div className="mb-3">&ldquo; TypeScript / React / React Native / Next.js / Vue &rdquo; <br/></div>
-              <div> &ldquo; styled-component / Tailwind CSS / Material UI &rdquo;</div>
-            </div>
-          </div>
-          <OpacityTextRow count={6}>ABOUT</OpacityTextRow>
-        </Element>
+        <About/>
         <Element name={navbarLinks.experience.id} className="relative min-h-screen text-white">
           <Title value="Experience"/>
           {experiences.map((item, index) => (

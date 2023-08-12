@@ -1,5 +1,4 @@
 import NavbarLink from './NavbarLink'
-// @ts-ignore
 import { Link } from 'react-scroll'
 import { HTMLAttributes } from 'react'
 

@@ -77,7 +77,7 @@ export default function ExperienceContent ({ title, subTitle, children, even, in
   return (
     <div className="w-full flex sm:text-center justify-center">
       <div className={'w-full sm:w-auto lg:min-w-[1024px] md:min-w-[800px] relative px-5 pt-[5rem] pb-[5rem]'}>
-        <div className={`select-none absolute hidden md:block  md:text-[12rem] lg:text-[16rem] italic text-white opacity-10 ${even ? '-right-0' : '-left-0 '} top-28 -translate-y-1/2`}>{index > 9 || '0'}{index + 1}</div>
+        {/* <div className={`select-none absolute hidden md:block  md:text-[12rem] lg:text-[16rem] italic text-white opacity-10 ${even ? '-right-0' : '-left-0 '} top-28 -translate-y-1/2`}>{index > 9 || '0'}{index + 1}</div> */}
         <div className="self-center">
           {link
             ? <Link href={link} passHref>
