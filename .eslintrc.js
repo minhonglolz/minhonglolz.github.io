@@ -87,5 +87,6 @@ module.exports = {
     /** https://typescript-eslint.io/rules/semi */
     semi: 'off',
     '@typescript-eslint/semi': ['error', 'never'],
+    '@next/next/no-title-in-document-head': 'off',
   },
 }
