@@ -21,7 +21,6 @@ export function About () {
         />
         <h4 className="text-2xl text-[#ed6424]">もう大丈夫だ！なぜって？私が來た！</h4>
       </div>
-      <OpacityTextRow count={6}>ABOUT</OpacityTextRow>
     </Element>
   )
 }
