@@ -1,4 +1,7 @@
-import Title from './Title'
+import { navbarLinks } from './Navbar'
+import { Element } from 'react-scroll'
+// @ts-ignore
+import Parallax from 'react-rellax'
 
 export const experiences = [
   {
@@ -42,8 +45,8 @@ export const experiences = [
   },
   {
     title: '全國高級中等學校技藝競賽',
-    subTitle: '程式競賽 金手獎',
-    date: '2018',
+    subTitle: '程式競賽金手獎',
+    date: '2018/10',
     contents: [
       '在高中時期被選為代表學校的選手從而開始了寫 Code 生涯',
       '也因為這次的機會讓我奠定了我對程式設計的基礎及熱忱',
@@ -51,20 +54,82 @@ export const experiences = [
   },
 ]
 
-export default function ExperienceContent () {
+function ExperienceListMD () {
   return (
-    <div className="w-full h-[100vh] flex flex-col items-center justify-center text-neutral-200 gap-y-10">
-      <Title value="Experience"/>
-      <div className={'flex flex-col w-full sm:w-auto lg:min-w-[1024px] md:min-w-[800px] relative gap-y-10'}>
-        {experiences.map(({ subTitle, title, date }) => (
-          <div key={title} className="flex justify-center gap-x-2 sm:text-center text-xl tracking-[0.1rem]">
+    <div className="hidden md:flex flex-col w-[60%] sm:w-auto relative gap-y-6 mt-64">
+      {experiences.map(({ subTitle, title, date }) => (
+        <div key={title} className="flex md:justify-start flex-wrap gap-x-2 text-xl tracking-[0.1rem]">
+          <div className="flex w-full justify-start">
             {title}
             <p>-</p>
             {subTitle && <h3>{subTitle}</h3>}
-            <p className="text-sm self-end">{date}</p>
           </div>
-        ))}
-      </div>
+          <span className="text-sm self-end">{date}</span>
+        </div>
+      ))}
     </div>
+  )
+}
+function ExperienceListSM () {
+  return (
+    <div className="flex flex-col sm:w-auto relative gap-y-6">
+      {experiences.map(({ subTitle, title, date }) => (
+        <div key={title} className="flex md:hidden md:justify-end flex-wrap gap-x-2 text-lg tracking-[0.1rem]">
+          <div className="flex w-full flex-col">
+            {title}
+            <p className="hidden sm:block">-</p>
+            {subTitle && <h3>{subTitle}</h3>}
+          </div>
+          <span className="text-sm self-end">{date}</span>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+export default function ExperienceContent () {
+  return (
+    <Element name={navbarLinks.experience.id} className="relative min-h-screen text-white mt-64">
+      <div className="w-full flex items-center justify-center text-neutral-200 gap-x-12">
+        {/* <Title value="Experience"/> */}
+
+        <div className="self-start md:w-[40%] w-full">
+          <Parallax speed={2}>
+            <div className="
+          flex
+          sm:flex-col
+          text-[55px] leading-[55px]
+          sm:text-[120px] sm:leading-[120px]
+          lg:text-[150px] lg:leading-[150px]
+          xl:text-[180px] xl:leading-[180px]
+          translate-y-[300px]
+          "
+            >
+              <div>
+                <span>E</span>
+                <span>X</span>
+                <span>P</span>
+                <span>E</span>
+                <span>R</span>
+              </div>
+              <div className="sm:ml-[140px] sm:-translate-y-[30px]">
+                <span>I</span>
+                <span>E</span>
+                <span>N</span>
+                <span>C</span>
+                <span>E</span>
+              </div>
+            </div>
+          </Parallax>
+          <div className="self-start text-xl sm:text-2xl mt-10 mb-10 sm:mt-10 sm:mb-0 sm:-translate-y-[50px] text-neutral-200">
+            <div className="mb-3">Skill<br/></div>
+            <div className="mb-3">&ldquo; TypeScript / React / Redux / Next.js &rdquo; <br/></div>
+            <div> &ldquo; Tailwind CSS / Material UI &rdquo;</div>
+          </div>
+          <ExperienceListSM/>
+        </div>
+        <ExperienceListMD/>
+      </div>
+    </Element>
   )
 }

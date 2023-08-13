@@ -6,7 +6,7 @@ import { Menu } from '../components/Menu'
 import Navbar, { navbarLinks } from '../components/Navbar'
 import ExperienceContent from '../components/ExperienceContent'
 import Loading from '../components/Loading'
-import { Link, Element } from 'react-scroll'
+import { Link } from 'react-scroll'
 import { About } from '../components/About'
 
 const Home: NextPage = () => {
@@ -18,11 +18,9 @@ const Home: NextPage = () => {
         <Navbar/>
       </Header>
       <HomeBackground/>
-      <div>
+      <div className="p-6">
         <About/>
-        <Element name={navbarLinks.experience.id} className="relative min-h-screen text-white">
-          <ExperienceContent/>
-        </Element>
+        <ExperienceContent/>
       </div>
       <section className="relative h-[300px] text-white">
         <OpacityTextRow count={6}>CLEAN</OpacityTextRow>
