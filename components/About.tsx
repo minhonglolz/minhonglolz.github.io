@@ -4,10 +4,8 @@ import Title from './Title'
 
 export function About () {
   return (
-    <Element name={navbarLinks.about.id}>
-      <div className="sm:w-auto flex flex-col items-center justify-center text-center px-5 text-white relative  gap-y-10
-      bg-gradient-to-b from-[#130605] via-[#000] to-[#000]"
-      >
+    <Element name={navbarLinks.about.id} className="relative">
+      <div className="sm:w-auto flex flex-col items-center justify-center text-center px-5 text-white relative  gap-y-10">
         <Title value="About"/>
         <div className="select-none absolute hidden md:block md:text-[12rem] lg:text-[16rem] italic text-white opacity-10">I&apos;m MIN</div>
         <div className="w-full px-5 gap-y-5 text-xl sm:text-2xl leading-[50px] sm:leading-[60px] sm:tracking-[0.2rem]">
