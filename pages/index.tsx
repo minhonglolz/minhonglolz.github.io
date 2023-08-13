@@ -4,8 +4,7 @@ import Header from '../components/Header'
 import HomeBackground from '../components/HomeBackground'
 import { Menu } from '../components/Menu'
 import Navbar, { navbarLinks } from '../components/Navbar'
-import Title from '../components/Title'
-import ExperienceContent, { experiences } from '../components/ExperienceContent'
+import ExperienceContent from '../components/ExperienceContent'
 import Loading from '../components/Loading'
 import { Link, Element } from 'react-scroll'
 import { About } from '../components/About'
@@ -22,24 +21,7 @@ const Home: NextPage = () => {
       <div>
         <About/>
         <Element name={navbarLinks.experience.id} className="relative min-h-screen text-white">
-          <Title value="Experience"/>
-          {experiences.map((item, index) => (
-            <ExperienceContent
-              key={item.title}
-              title={item.title}
-              subTitle={item.subTitle}
-              date={item.date}
-              even={Boolean(index % 2)}
-              index={index}
-              link={item.link}
-            >
-              <span className="list-disc tracking-widest">
-                {item.contents.map((content, index) =>
-                  <p key={index}>{content}</p>
-                )}
-              </span>
-            </ExperienceContent>
-          ))}
+          <ExperienceContent/>
         </Element>
       </div>
       <section className="relative h-[300px] text-white">
