@@ -1,6 +1,4 @@
-import { ImageProps } from 'next/image'
-import Link from 'next/link'
-import { ReactNode } from 'react'
+import Title from './Title'
 
 export const experiences = [
   {
@@ -34,15 +32,7 @@ export const experiences = [
     ],
   },
   {
-    title: '國立高雄科技大學 NKUST',
-    subTitle: '研究助理',
-    date: '2020/03',
-    contents: [
-      '應用德語系 & 產學營運處網站開發並提供 i18n 功能',
-    ],
-  },
-  {
-    title: '2021 ZERO HUNGER 黑客松',
+    title: 'ZERO HUNGER 黑客松',
     subTitle: '技職盃全國大賽',
     date: '2021/05',
     contents: [
@@ -51,7 +41,7 @@ export const experiences = [
     ],
   },
   {
-    title: '2018 全國高級中等學校技藝競賽',
+    title: '全國高級中等學校技藝競賽',
     subTitle: '程式競賽 金手獎',
     date: '2018',
     contents: [
@@ -61,39 +51,20 @@ export const experiences = [
   },
 ]
 
-type Props = {
-  title: string,
-  subTitle?: string,
-  date: string,
-  children?: ReactNode,
-  image?: ImageProps['src'],
-  imageAlt?: string,
-  even?: boolean,
-  index: number,
-  link?: string,
-}
-
-export default function ExperienceContent ({ title, subTitle, children, even, index, link }: Props) {
+export default function ExperienceContent () {
   return (
-    <div className="w-full flex sm:text-center justify-center">
-      <div className={'w-full sm:w-auto lg:min-w-[1024px] md:min-w-[800px] relative px-5 pt-[5rem] pb-[5rem]'}>
-        {/* <div className={`select-none absolute hidden md:block  md:text-[12rem] lg:text-[16rem] italic text-white opacity-10 ${even ? '-right-0' : '-left-0 '} top-28 -translate-y-1/2`}>{index > 9 || '0'}{index + 1}</div> */}
-        <div className="self-center">
-          {link
-            ? <Link href={link} passHref>
-              <a target="_blank" className="border-b-2 text-neutral-100 text-3xl font-bold leading-[60px]">{title}</a>
-            </Link>
-            : <div className="text-neutral-100 text-3xl font-bold leading-[60px]">{title}</div>
-          }
-          <div>
-            {subTitle && <h3 className="text-neutral-200 text-2xl italic self-end leading-[50px]">{subTitle}</h3>}
-            <div className="text-neutral-300 sm:text-center text-lg tracking-widest leading-[35px] mt-3">
-              {children}
-            </div>
+    <div className="w-full h-[100vh] flex flex-col items-center justify-center text-neutral-200 gap-y-10">
+      <Title value="Experience"/>
+      <div className={'flex flex-col w-full sm:w-auto lg:min-w-[1024px] md:min-w-[800px] relative gap-y-10'}>
+        {experiences.map(({ subTitle, title, date }) => (
+          <div key={title} className="flex justify-center gap-x-2 sm:text-center text-xl tracking-[0.1rem]">
+            {title}
+            <p>-</p>
+            {subTitle && <h3>{subTitle}</h3>}
+            <p className="text-sm self-end">{date}</p>
           </div>
-        </div>
+        ))}
       </div>
     </div>
-
   )
 }
