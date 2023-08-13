@@ -14,7 +14,12 @@
     "next": "12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-rellax": "^1.0.3",
     "react-scroll": "^1.8.6"
+  },
+  "engines": {
+    "npm": "please-use-yarn",
+    "pnpm": "please-use-yarn"
   },
   "devDependencies": {
     "@types/node": "17.0.21",
