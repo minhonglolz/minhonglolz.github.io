@@ -57,6 +57,9 @@ module.exports = {
         opacity0To1: 'opacity0To1 .5s ease-in-out forwards',
       },
     },
+    fontFamily: {
+      gon: ['Dela Gothic One', 'cursive'],
+    },
   },
   plugins: [
   ],
