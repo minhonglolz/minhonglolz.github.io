@@ -192,7 +192,7 @@
 
 "@types/react-scroll@^1.8.7":
   version "1.8.7"
-  resolved "https://registry.yarnpkg.com/@types/react-scroll/-/react-scroll-1.8.7.tgz#7241c6ccd47839d79227a23a5184d727245c7324"
+  resolved "https://registry.npmjs.org/@types/react-scroll/-/react-scroll-1.8.7.tgz"
   integrity sha512-BB8g+hQL7OtBPWg/NcES6p5u6vduZonGl1BxrsGUwcefE53pfI0pFDd1lRFndgEUE6whYdFfhD+j0sZZT/6brQ==
   dependencies:
     "@types/react" "*"
@@ -1763,7 +1763,7 @@ prelude-ls@^1.2.1:
   resolved "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prop-types@^15.7.2, prop-types@^15.8.1:
+prop-types@^15.6.1, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -1800,6 +1800,14 @@ react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-rellax@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/react-rellax/-/react-rellax-1.0.3.tgz"
+  integrity sha512-njrc/VpQMPmzLVBdwwhIKEXXeYbPog94Fv8TKbhTnIG8x97Df6ZATRWQJs2WVvMY4SXhjQ5j8vE93dlur7HsKw==
+  dependencies:
+    prop-types "^15.6.1"
+    rellax "^1.9.1"
 
 react-scroll@^1.8.6:
   version "1.8.6"
@@ -1841,6 +1849,11 @@ regexpp@^3.0.0, regexpp@^3.2.0:
   version "3.2.0"
   resolved "https://registry.npmjs.org/regexpp/-/regexpp-3.2.0.tgz"
   integrity sha512-pq2bWo9mVD43nbts2wGv17XLiNLya+GklZ8kaDLV2Z08gDCsGpnKn9BFMepvWuHCbyVvY7J5o5+BVvoQbmlJLg==
+
+rellax@^1.9.1:
+  version "1.12.1"
+  resolved "https://registry.npmjs.org/rellax/-/rellax-1.12.1.tgz"
+  integrity sha512-XBIi0CDpW5FLTujYjYBn1CIbK2CJL6TsAg/w409KghP2LucjjzBjsujXDAjyBLWgsfupfUcL5WzdnIPcGfK7XA==
 
 resolve-from@^4.0.0:
   version "4.0.0"
