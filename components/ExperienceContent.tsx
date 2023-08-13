@@ -56,7 +56,7 @@ export const experiences = [
 
 function ExperienceListMD () {
   return (
-    <div className="hidden md:flex flex-col w-[60%] sm:w-auto relative gap-y-6 mt-64">
+    <div className="hidden md:flex flex-col w-[60%] sm:w-auto relative gap-y-6 mt-80">
       {experiences.map(({ subTitle, title, date }) => (
         <div key={title} className="flex md:justify-start flex-wrap gap-x-2 text-xl tracking-[0.1rem]">
           <div className="flex w-full justify-start">
@@ -102,7 +102,7 @@ export default function ExperienceContent () {
           sm:text-[120px] sm:leading-[120px]
           lg:text-[150px] lg:leading-[150px]
           xl:text-[180px] xl:leading-[180px]
-          translate-y-[300px]
+          translate-y-[250px]
           "
             >
               <div>
