@@ -1,14 +1,12 @@
 import { Element } from 'react-scroll'
 import { navbarLinks } from '../components/Navbar'
-import Title from './Title'
 // @ts-ignore
 import Parallax from 'react-rellax'
 
 export function About () {
   return (
     <Element name={navbarLinks.about.id} className="relative mt-48">
-      <div className="sm:w-full flex flex-col md:flex-row-reverse md:items-center justify-center px-5 text-white relative gap-x-12 gap-y-10">
-        {/* <Title value="About"/> */}
+      <div className="sm:w-full flex flex-col md:flex-row-reverse md:items-center justify-center text-white relative gap-x-12 gap-y-10">
         <div className="flex-none md:w-1/2">
           <Parallax speed={2}>
             <div className="
