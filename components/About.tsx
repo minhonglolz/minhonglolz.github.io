@@ -1,13 +1,16 @@
-import { OpacityTextRow } from './OpacityTextRow'
 import { Element } from 'react-scroll'
 import { navbarLinks } from '../components/Navbar'
+import Title from './Title'
 
 export function About () {
   return (
     <Element name={navbarLinks.about.id}>
-      <div className="flex flex-col items-center justify-center sm:text-center px-5 text-white relative h-[100vh] gap-y-10">
+      <div className="sm:w-auto flex flex-col items-center justify-center text-center px-5 text-white relative  gap-y-10
+      bg-gradient-to-b from-[#130605] via-[#000] to-[#000]"
+      >
+        <Title value="About"/>
         <div className="select-none absolute hidden md:block md:text-[12rem] lg:text-[16rem] italic text-white opacity-10">I&apos;m MIN</div>
-        <div className="gap-5 text-2xl mt-6 leading-[60px] tracking-[0.2rem]">
+        <div className="w-full px-5 gap-y-5 text-xl sm:text-2xl leading-[50px] sm:leading-[60px] sm:tracking-[0.2rem]">
           <p>現職前端工程師</p>
           <p>擅長使用 React 和 TypeScript</p>
           <p>追求於撰寫高品質的程式碼</p>
@@ -16,10 +19,10 @@ export function About () {
           <p>不斷追逐著 Clean Code</p>
           <p>目標是成為自己心目中的英雄</p>
         </div>
-        <div className="cursor-pointer z-20 text-white   -translate-x-1/2 left-1/2
-        before:absolute before:left-1/2 before:bottom-0 before:w-px h-24 before:h-24 before:bg-white before:z-30 select-none"
+        <div className=" text-white -translate-x-1/2 left-1/2
+       w-px h-36  bg-white z-30 select-none"
         />
-        <h4 className="text-2xl text-[#ed6424]">もう大丈夫だ！なぜって？私が來た！</h4>
+        <h4 className="text-xl sm:text-2xl text-[#ed6424]">もう大丈夫だ！なぜって？私が來た！</h4>
       </div>
     </Element>
   )
